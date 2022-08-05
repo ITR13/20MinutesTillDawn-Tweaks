@@ -13,8 +13,10 @@ namespace ItrsTweaks
         public static Action<string> Error { get; private set; }
 
         public static MelonPreferences_Entry<int> _volumePercent;
+        public static MelonPreferences_Entry<bool> _holdToActivateSkill;
 
         public static int VolumePercent => _volumePercent.Value;
+        public static bool HoldToActivateSkill => _holdToActivateSkill.Value;
 
         public override void OnApplicationStart()
         {
@@ -23,7 +25,9 @@ namespace ItrsTweaks
             Error = LoggerInstance.Error;
 
             var category = MelonPreferences.CreateCategory("ItrsTweaks");
+
             _volumePercent = category.CreateEntry("VolumeStep", 10, "Volume Step (Percent)", "How many percent the volume slider steps every time you click it");
+            _holdToActivateSkill = category.CreateEntry("HoldToActivateSkill", true, "Automatic Skill", "Allows you to hold right click to automatically fire your skill");
         }
     }
 }

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="MainClass.cs" />
+    <Compile Include="SkillPassivePatch.cs" />
     <Compile Include="OptionsSetterPatch.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +49,10 @@
     </Reference>
     <Reference Include="MelonLoader">
       <HintPath>G:\SteamLibrary\steamapps\common\ChilloutVR\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
