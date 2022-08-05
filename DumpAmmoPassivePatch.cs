@@ -1,13 +1,17 @@
 ﻿using flanne;
 using flanne.CharacterPassives;
 using HarmonyLib;
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ItrsTweaks
 {
     [HarmonyPatch(typeof(DumpAmmoPassive), "ShootRandom")]
     public static class DumpAmmoPassiveShootRandomPatch
     {
+        public static Vector2? CurrentlyRandomShooting;
+
         private static Vector2 OldRandomDirection()
         {
             Vector2 vector = Vector2.zero;
@@ -38,7 +42,17 @@ namespace ItrsTweaks
             var gunshotSFX = ___myGun.gunData.gunshotSFX;
             // Null propagation doesn't work with unity's null
             if (gunshotSFX) gunshotSFX.Play();
-            ___myGun.OnShoot.Invoke();
+
+            CurrentlyRandomShooting = vector;
+            try
+            {
+                ___myGun.OnShoot.Invoke();
+            }
+            catch (Exception e)
+            {
+                MainClass.Eerror("Exception in OnShoot: ", e);
+            }
+            CurrentlyRandomShooting = null;
 
             return false;
         }

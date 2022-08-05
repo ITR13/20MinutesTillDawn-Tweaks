@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DumpAmmoPassivePatch.cs" />
+    <Compile Include="ProjectileOnShootPatch.cs" />
+    <Compile Include="ShootBulletsBehindPatch.cs" />
     <Compile Include="StateMachinePatch.cs" />
     <Compile Include="ReloadStatePatch.cs" />
     <Compile Include="MainClass.cs" />

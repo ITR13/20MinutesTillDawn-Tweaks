@@ -11,22 +11,26 @@ namespace ItrsTweaks
         public static Action<string> Msg { get; private set; }
         public static Action<string> Warning { get; private set; }
         public static Action<string> Error { get; private set; }
+        public static Action<string, Exception> Eerror { get; private set; }
 
         private static MelonPreferences_Entry<int> _volumePercent;
         private static MelonPreferences_Entry<bool> _holdToActivateSkill;
         private static MelonPreferences_Entry<bool> _noAttack;
         private static MelonPreferences_Entry<bool> _fixRandomShot;
+        private static MelonPreferences_Entry<bool> _randomShotsAffectOnShoot;
 
         public static int VolumePercent => _volumePercent.Value;
         public static bool HoldToActivateSkill => _holdToActivateSkill.Value;
         public static bool RegularAttackAllowed => !_noAttack.Value;
         public static bool FixRandomShot => _fixRandomShot.Value;
+        public static bool RandomShotsAffectOnShoot => _randomShotsAffectOnShoot.Value;
 
         public override void OnApplicationStart()
         {
             Msg = LoggerInstance.Msg;
             Warning = LoggerInstance.Warning;
             Error = LoggerInstance.Error;
+            Eerror = LoggerInstance.Error;
 
             var category = MelonPreferences.CreateCategory("ItrsTweaks");
 
@@ -37,6 +41,7 @@ namespace ItrsTweaks
             var challengesCategory = MelonPreferences.CreateCategory("ItrsChallenges");
 
             _noAttack = challengesCategory.CreateEntry("NoAttack", false, "Disable Main Attack", "Prevents you from attacking and reloading with your left mouse button");
+            _randomShotsAffectOnShoot = challengesCategory.CreateEntry("AbbyExtraChallenge", false, "Abby Extra Challenge", "Makes Abby's passive also affect powerups that fire every nth shot");
         }
     }
 }
