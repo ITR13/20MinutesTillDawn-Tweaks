@@ -15,10 +15,12 @@ namespace ItrsTweaks
         private static MelonPreferences_Entry<int> _volumePercent;
         private static MelonPreferences_Entry<bool> _holdToActivateSkill;
         private static MelonPreferences_Entry<bool> _noAttack;
+        private static MelonPreferences_Entry<bool> _fixRandomShot;
 
         public static int VolumePercent => _volumePercent.Value;
         public static bool HoldToActivateSkill => _holdToActivateSkill.Value;
         public static bool RegularAttackAllowed => !_noAttack.Value;
+        public static bool FixRandomShot => _fixRandomShot.Value;
 
         public override void OnApplicationStart()
         {
@@ -30,6 +32,7 @@ namespace ItrsTweaks
 
             _volumePercent = category.CreateEntry("VolumeStep", 10, "Volume Step (Percent)", "How many percent the volume slider steps every time you click it");
             _holdToActivateSkill = category.CreateEntry("HoldToActivateSkill", true, "Automatic Skill", "Allows you to hold right click to automatically fire your skill");
+            _fixRandomShot = category.CreateEntry("FixRandomShot", true, "Fix Random Shots", "Makes Abby's passive less biased");
 
             var challengesCategory = MelonPreferences.CreateCategory("ItrsChallenges");
 
