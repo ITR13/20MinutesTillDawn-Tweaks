@@ -12,9 +12,9 @@ namespace ItrsTweaks
         public static Action<string> Warning { get; private set; }
         public static Action<string> Error { get; private set; }
 
-        public static MelonPreferences_Entry<int> _volumePercent;
-        public static MelonPreferences_Entry<bool> _holdToActivateSkill;
-        public static MelonPreferences_Entry<bool> _noAttack;
+        private static MelonPreferences_Entry<int> _volumePercent;
+        private static MelonPreferences_Entry<bool> _holdToActivateSkill;
+        private static MelonPreferences_Entry<bool> _noAttack;
 
         public static int VolumePercent => _volumePercent.Value;
         public static bool HoldToActivateSkill => _holdToActivateSkill.Value;

@@ -1,5 +1,4 @@
-﻿using flanne;
-using flanne.Player;
+﻿using flanne.Player;
 using HarmonyLib;
 using UnityEngine.InputSystem;
 

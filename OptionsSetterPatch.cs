@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace ItrsTweaks
 {
     [HarmonyPatch(typeof(OptionsSetter), nameof(OptionsSetter.OnClickSFXVolume))]
-    public class SfxVolumePatch
+    public class OptionSetterSfxVolumePatch
     {
         public static void Prefix(AudioManager ___AM)
         {
@@ -14,7 +14,7 @@ namespace ItrsTweaks
     }
 
     [HarmonyPatch(typeof(OptionsSetter), nameof(OptionsSetter.OnClickBGMVolume))]
-    public class BgmVolumePatch
+    public class OptionSetterBgmVolumePatch
     {
         public static void Prefix(AudioManager ___AM)
         {

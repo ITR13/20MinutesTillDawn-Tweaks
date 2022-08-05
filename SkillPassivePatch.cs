@@ -1,8 +1,5 @@
-﻿using flanne;
-using flanne.CharacterPassives;
+﻿using flanne.CharacterPassives;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
 using UnityEngine.InputSystem;
 
 namespace ItrsTweaks
