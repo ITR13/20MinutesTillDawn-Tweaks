@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 namespace ItrsTweaks
 {
     [HarmonyPatch(typeof(SkillPassive), "Update")]
-    public class SkillPassiveStartPatch
+    public static class SkillPassiveStartPatch
     {
         public static void Postfix(SkillPassive __instance, InputAction ____skillAction, float ____timer)
         {

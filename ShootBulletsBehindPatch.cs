@@ -13,7 +13,7 @@ using UnityEngine.InputSystem;
 namespace ItrsTweaks
 {
     [HarmonyPatch(typeof(ShootBulletsBehind), "OnShoot")]
-    public class ShootBHulletsBehindOnShootPatch
+    public static class ShootBHulletsBehindOnShootPatch
     {
         public static bool Prefix(ShootBulletsBehind __instance, float ___spread, int ___numOfBullets, float ___damageMultiplier, ProjectileFactory ___PF, Gun ___myGun)
         {
