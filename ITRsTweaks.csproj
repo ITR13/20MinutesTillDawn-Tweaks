@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DumpAmmoPassivePatch.cs" />
+    <Compile Include="LargerThan0ValueValidator.cs" />
     <Compile Include="ProjectileOnShootPatch.cs" />
     <Compile Include="ShootBulletsBehindPatch.cs" />
     <Compile Include="ShootDetectorPatch.cs" />
