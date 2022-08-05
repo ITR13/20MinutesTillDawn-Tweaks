@@ -36,7 +36,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="StateMachinePatch.cs" />
+    <Compile Include="ReloadStatePatch.cs" />
     <Compile Include="MainClass.cs" />
+    <Compile Include="IdleStatePatch.cs" />
     <Compile Include="SkillPassivePatch.cs" />
     <Compile Include="OptionsSetterPatch.cs" />
   </ItemGroup>
