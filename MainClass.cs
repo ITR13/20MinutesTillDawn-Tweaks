@@ -2,7 +2,6 @@
 using MelonLoader;
 using ItrsTweaks;
 using UnityEngine;
-using MelonLoader.Preferences;
 
 [assembly: MelonInfo(typeof(MainClass), "ITR's Tweaks", "0.1.0", "ITR")]
 [assembly: MelonGame("Flanne", "MinutesTillDawn")]
@@ -21,6 +20,7 @@ namespace ItrsTweaks
         private static MelonPreferences_Entry<bool> _fixRandomShot;
         private static MelonPreferences_Entry<bool> _randomShotsAffectOnShoot;
         private static MelonPreferences_Entry<float> _timeScale;
+        private static MelonPreferences_Entry<bool> _showStatistics;
 
         public static int VolumePercent => _volumePercent.Value;
         public static bool HoldToActivateSkill => _holdToActivateSkill.Value;
@@ -43,6 +43,7 @@ namespace ItrsTweaks
 
             var cheatsCategory = MelonPreferences.CreateCategory("ITR'sCheats");
             _timeScale = cheatsCategory.CreateEntry("TimeScale", 1f, "Time scale", "Overwrites how fast the game is when not paused", false, false, new LargerThan0ValueValidator());
+            _showStatistics = cheatsCategory.CreateEntry("Statistics", false, "Statistics", "Shows some useful statistics");
 
             var challengesCategory = MelonPreferences.CreateCategory("ITR'sChallenges");
 
@@ -57,6 +58,16 @@ namespace ItrsTweaks
             if (oldTimescale != 0 && oldTimescale != timescale)
             {
                 Time.timeScale = timescale;
+            }
+        }
+
+        public override void OnFixedUpdate() => StatManager.OnFixedUpdate();
+
+        public override void OnGUI()
+        {
+            if (_showStatistics.Value)
+            {
+                StatManager.OnGUI();
             }
         }
     }

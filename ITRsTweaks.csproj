@@ -37,16 +37,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DumpAmmoPassivePatch.cs" />
+    <Compile Include="EpmCalc.cs" />
+    <Compile Include="HealthPatch.cs" />
     <Compile Include="LargerThan0ValueValidator.cs" />
+    <Compile Include="DropHPOverTimePatch.cs" />
+    <Compile Include="PreventDamagePatch.cs" />
     <Compile Include="ProjectileOnShootPatch.cs" />
     <Compile Include="ShootBulletsBehindPatch.cs" />
     <Compile Include="ShootDetectorPatch.cs" />
+    <Compile Include="PlayerControllerPatch.cs" />
     <Compile Include="StateMachinePatch.cs" />
     <Compile Include="ReloadStatePatch.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="IdleStatePatch.cs" />
     <Compile Include="SkillPassivePatch.cs" />
     <Compile Include="OptionsSetterPatch.cs" />
+    <Compile Include="StatManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -68,6 +74,10 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
