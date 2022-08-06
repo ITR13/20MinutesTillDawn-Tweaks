@@ -3,7 +3,6 @@ using MelonLoader;
 using ItrsTweaks;
 using UnityEngine;
 using System.Collections.Generic;
-using Harmony;
 
 [assembly: MelonInfo(typeof(MainClass), "ITR's Tweaks", "0.1.0", "ITR")]
 [assembly: MelonGame("Flanne", "MinutesTillDawn")]

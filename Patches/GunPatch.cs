@@ -1,6 +1,5 @@
 ﻿using flanne;
 using HarmonyLib;
-using System.Collections.Generic;
 
 namespace ItrsTweaks
 {

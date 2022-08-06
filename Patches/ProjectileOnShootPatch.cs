@@ -1,5 +1,4 @@
-﻿using flanne;
-using flanne.PowerupSystem;
+﻿using flanne.PowerupSystem;
 using HarmonyLib;
 using UnityEngine;
 using Random = UnityEngine.Random;

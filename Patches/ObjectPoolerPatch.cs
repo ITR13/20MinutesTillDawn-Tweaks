@@ -1,9 +1,7 @@
 ﻿using flanne;
-using flanne.Player;
 using HarmonyLib;
 using MelonLoader;
 using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 
 namespace ItrsTweaks

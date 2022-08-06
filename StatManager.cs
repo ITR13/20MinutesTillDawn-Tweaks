@@ -20,7 +20,7 @@ namespace ItrsTweaks
 
         #region GUI stuff
         private static int _controlId = -1;
-        private static Rect _guiRect = new Rect(20, 200, 200, 22 * 6);
+        private static Rect _guiRect = new Rect(20, 200, 200, 30 * 6);
         #endregion
 
         public static void OnFixedUpdate()
@@ -33,7 +33,7 @@ namespace ItrsTweaks
             _damagePerSecond.OnFixedUpdate();
 
             _guiRect.width = 200;
-            _guiRect.height = 22 * 6;
+            _guiRect.height = 30 * 6;
         }
 
 

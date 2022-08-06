@@ -37,25 +37,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DisableGraphics.cs" />
-    <Compile Include="DumpAmmoPassivePatch.cs" />
+    <Compile Include="Patches\DumpAmmoPassivePatch.cs" />
     <Compile Include="EpmCalc.cs" />
-    <Compile Include="GunPatch.cs" />
-    <Compile Include="HealthPatch.cs" />
+    <Compile Include="Patches\GunPatch.cs" />
     <Compile Include="LargerThan0ValueValidator.cs" />
-    <Compile Include="DropHPOverTimePatch.cs" />
-    <Compile Include="PreventDamagePatch.cs" />
-    <Compile Include="ProjectileOnShootPatch.cs" />
-    <Compile Include="ShootBulletsBehindPatch.cs" />
-    <Compile Include="ShootDetectorPatch.cs" />
-    <Compile Include="PlayerControllerPatch.cs" />
-    <Compile Include="DamagePopupSpawnerPatch.cs" />
-    <Compile Include="ObjectPoolerPatch.cs" />
-    <Compile Include="StateMachinePatch.cs" />
-    <Compile Include="ReloadStatePatch.cs" />
+    <Compile Include="Patches\DropHPOverTimePatch.cs" />
+    <Compile Include="Patches\PreventDamagePatch.cs" />
+    <Compile Include="Patches\ProjectileOnShootPatch.cs" />
+    <Compile Include="Patches\ShootBulletsBehindPatch.cs" />
+    <Compile Include="Patches\ShootDetectorPatch.cs" />
+    <Compile Include="Patches\PlayerControllerPatch.cs" />
+    <Compile Include="Patches\DamagePopupSpawnerPatch.cs" />
+    <Compile Include="Patches\ObjectPoolerPatch.cs" />
+    <Compile Include="Patches\StateMachinePatch.cs" />
+    <Compile Include="Patches\ReloadStatePatch.cs" />
     <Compile Include="MainClass.cs" />
-    <Compile Include="IdleStatePatch.cs" />
-    <Compile Include="SkillPassivePatch.cs" />
-    <Compile Include="OptionsSetterPatch.cs" />
+    <Compile Include="Patches\IdleStatePatch.cs" />
+    <Compile Include="Patches\SkillPassivePatch.cs" />
+    <Compile Include="Patches\OptionsSetterPatch.cs" />
     <Compile Include="StatManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +81,14 @@
     <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\SteamLibrary\steamapps\common\20MinuteTillDawn\MinutesTillDawn_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
