@@ -36,8 +36,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DisableGraphics.cs" />
     <Compile Include="DumpAmmoPassivePatch.cs" />
     <Compile Include="EpmCalc.cs" />
+    <Compile Include="GunPatch.cs" />
     <Compile Include="HealthPatch.cs" />
     <Compile Include="LargerThan0ValueValidator.cs" />
     <Compile Include="DropHPOverTimePatch.cs" />
@@ -46,6 +48,8 @@
     <Compile Include="ShootBulletsBehindPatch.cs" />
     <Compile Include="ShootDetectorPatch.cs" />
     <Compile Include="PlayerControllerPatch.cs" />
+    <Compile Include="DamagePopupSpawnerPatch.cs" />
+    <Compile Include="ObjectPoolerPatch.cs" />
     <Compile Include="StateMachinePatch.cs" />
     <Compile Include="ReloadStatePatch.cs" />
     <Compile Include="MainClass.cs" />

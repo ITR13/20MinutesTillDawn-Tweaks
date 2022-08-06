@@ -1,11 +1,20 @@
-﻿using flanne.PowerupSystem;
+﻿using flanne;
+using flanne.PowerupSystem;
 using HarmonyLib;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace ItrsTweaks
 {
-    [HarmonyDebug]
+    [HarmonyPatch(typeof(ProjectileOnShoot), "Init")]
+    public static class ProjectileOnShootInitPatch
+    {
+        public static void Prefix(GameObject ___projectilePrefab)
+        {
+            ObjectPoolerAddObjectPatch.BulletNames.Add(___projectilePrefab.name);
+        }
+    }
+
     [HarmonyPatch(typeof(ProjectileOnShoot), nameof(ProjectileOnShoot.Attack))]
     public static class ProjectileOnShootAttackPatch
     {
